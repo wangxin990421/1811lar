@@ -1,0 +1,17 @@
+----------------------------888971920051934463196600
+Content-Disposition: form-data; name="username"
+
+shangs
+----------------------------888971920051934463196600
+Content-Disposition: form-data; name="pwd"
+
+123456
+----------------------------888971920051934463196600
+Content-Disposition: form-data; name="sex"
+
+男
+----------------------------888971920051934463196600
+Content-Disposition: form-data; name="grade"
+
+100
+----------------------------888971920051934463196600--
