@@ -49,6 +49,27 @@ route::group(['prefix'=>'work','middleware'=>'jwt'],function(){
 //项目路由
 Route::post('user/reg','Api\UserController@reg');   // 用户注册
 Route::post('user/login','Api\UserController@login');   // 用户登录
+Route::post('index/goodslist','Api\IndexController@goodslist');   // 商品首页数据展示
+Route::post('index/goodslistf','Api\IndexController@goodslistf');   // 商品首页数据展示
 
+Route::post('car/caradd','Api\CarController@caradd');   // 购物车数据添加
+Route::post('car/carlist','Api\CarController@carlist');   // 购物车列表数据
+Route::post('car/changenum','Api\CarController@changenum');   // 购物车列表数据
+
+Route::post('goods/goodslists','Api\GoodsController@goodslists');   // 商品数据展示
+Route::post('goods/goodsdetil','Api\GoodsController@goodsdetil');   // 商品数据展示
+route::group(['prefix'=>'index','middleware'=>'checktoken'],function(){
+    Route::post('index','Api\IndexController@index');   // 首页
+});
+
+
+
+//周考   路由
+route::group(['prefix'=>'zhou','middleware'=>'checkrequest'],function(){
+    Route::post('login','test\TestController@login');
+});
+
+
+Route::get('zhou/loginOut','test\TestController@loginOut');
 
 

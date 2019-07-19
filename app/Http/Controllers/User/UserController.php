@@ -90,6 +90,7 @@ class UserController extends Controller
     {
         //生成私钥对象
         $private = openssl_pkey_new();
+//        ($private);
         //从私钥里获取私钥
         openssl_pkey_export($private,$privateKey);
         //保存私钥看，
